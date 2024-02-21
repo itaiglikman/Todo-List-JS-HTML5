@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+
+    <!-- font-awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="alert/dist/sweetalert.css"> swal alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+
+
+
+</head>
+
+<body>
+    <header>
+        <!-- <h1>Best TODO List Ever</h1>
+        <h2>keep it full with empty tasks...</h2> -->
+        <div class="titleLogo"></div>
+    </header>
+
+    <main>
+        <section class="formContainer">
+            <form class="form" id="taskForm" onsubmit="save()">
+                
+                <div class="titleContainer">
+                    <label for="titleBox">Title:</label>
+                    <input type="text" id="titleBox">
+                </div>
+                
+                <div class="descriptionContainer">
+                    <label for="descriptionBox">Description:</label>
+                    <textarea id="descriptionBox" cols="30" rows="30"></textarea>
+                </div>
+
+                <div class="deadlineContainer">
+                    <label for="deadlineBox">Deadline:</label>
+                    <input type="datetime-local" id="deadlineBox" min="">
+                </div>
+
+                <div class="buttonsContainer">
+                    <button type="submit">Add Task</button>
+                    <button type="reset" id="clearButton">Clear Form</button>
+                    <button type="button" onclick="clearFromStorage()">Clear All</button>
+                </div>
+            </form>
+        </section>
+        <section class="tasksSection" id="tasksSection"></section>
+    </main>
+</body>
+
+</html>
